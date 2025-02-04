@@ -1,6 +1,6 @@
 import { Login, User } from "@/util/PostLogin";
 import { jwtDecode } from "jwt-decode";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [data, setData] = useState<User>({
