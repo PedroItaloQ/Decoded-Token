@@ -1,4 +1,5 @@
 import { Login, User } from "@/util/PostLogin";
+import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -19,7 +20,12 @@ export default function Home() {
     e.preventDefault();
     try {
       const response = await Login(data);
-      console.log("Login successful:", response.data);
+      //Aqui eu chamo a lib para decodificar o token...
+      const jwtDecoded = jwtDecode(response.data.token);
+      //Aqui dou um console.log() para acessar os dados decodificado do token...
+      console.log("Token decodificado: ", jwtDecoded);
+
+      alert("Login realizado com sucesso!");
     } catch (error) {
       console.log("ERROR: ", error);
     }
