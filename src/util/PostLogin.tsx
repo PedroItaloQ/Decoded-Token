@@ -5,7 +5,7 @@ export interface User {
     password: string;
 }
 
-const API = process.env.PUBLIC_NEXT_API_HOMOLOG_USER;
+const API = process.env.NEXT_PUBLIC_API_HOMOLOG_USER;
 
 export const Login = async (credentials: User): Promise<AxiosResponse<any>> => {
     try {
