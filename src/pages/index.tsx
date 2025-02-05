@@ -16,6 +16,24 @@ export default function Home() {
     });
   };
 
+  /*
+    
+    //Caso não tenha backend para testar, há um site que você pode gerar um token: https://jwt.io
+    //Nesse site, voce pega o token e descomente a função abaixo incluindo o token na constante "token"
+    //para testar a decodificação na prática.
+    
+    const handleSubmitTeste = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBcG9sbG9Vc3VhcmlvIiwic3ViIjoicGVkcm9pdGFsb0BtZWlyZWxlc2VmcmVpdGFzLmFkdi5iciIsInJvbGUiOiJDT09SREVOQURPUiIsImV4cCI6MTczODc4NzcyN30.QKzSr3L77YfWVFldSnmuoVDQFxUWI-Z9hL34bodQXPk";
+
+    const jwtDecoded = jwtDecode(token);
+
+    console.log(jwtDecoded);
+  }
+  */
+
+  //Na função abaixo eu uso o jwtDecode para decodificar o token que vem direto do backend
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
